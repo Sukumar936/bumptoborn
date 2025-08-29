@@ -1,0 +1,13 @@
+/* Custom styles */
+.gold-text{background:linear-gradient(90deg,#b48b3c,#e9d8a6,#b48b3c);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.btn-ripple{position:relative;overflow:hidden}
+.btn-ripple .r{position:absolute;border-radius:9999px;transform:scale(0);animation:ripple .6s linear;background:rgba(255,255,255,.7);pointer-events:none}
+@keyframes ripple{to{transform:scale(4);opacity:0}}
+
+.loader{width:56px;height:56px;position:relative}
+.loader:before,.loader:after{content:"";position:absolute;inset:0;border-radius:50%;border:6px solid #F7DDE0;filter:drop-shadow(0 0 6px rgba(200,165,89,.35))}
+.loader:after{border-color:transparent #C8A559 transparent #C8A559;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+:focus-visible{outline:3px solid #C8A559;outline-offset:3px}

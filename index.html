@@ -8,19 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <script src="assets/js/tw-config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{blush:'#F7DDE0',softblue:'#DDEAF7',gold:'#C8A559',ink:'#0E0E10'},fontFamily:{display:['Playfair Display','serif'],body:['Montserrat','system-ui','sans-serif']},boxShadow:{soft:'0 10px 30px rgba(0,0,0,.08)'}}}};</script>
-  <style>
-    .gold-text{background:linear-gradient(90deg,#b48b3c,#e9d8a6,#b48b3c);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .btn-ripple{position:relative;overflow:hidden}
-    .btn-ripple .r{position:absolute;border-radius:9999px;transform:scale(0);animation:ripple .6s linear;background:rgba(255,255,255,.7);pointer-events:none}
-    @keyframes ripple{to{transform:scale(4);opacity:0}}
-    .loader{width:56px;height:56px;position:relative}
-    .loader:before,.loader:after{content:"";position:absolute;inset:0;border-radius:50%;border:6px solid #F7DDE0;filter:drop-shadow(0 0 6px rgba(200,165,89,.35))}
-    .loader:after{border-color:transparent #C8A559 transparent #C8A559;animation:spin 1s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    :focus-visible{outline:3px solid #C8A559;outline-offset:3px}
-  </style>
 </head>
 <body class="bg-white text-ink font-body antialiased selection:bg-blush/60 selection:text-ink">
   <!-- Minimal loader (auto hides after DOM ready) -->
@@ -47,14 +37,14 @@
   <main id="home" class="pt-16">
     <!-- Hero -->
     <section class="relative min-h-[88vh] grid place-items-center overflow-hidden">
-      <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1920&auto=format&fit=crop" alt="Elegant maternity portrait" class="absolute inset-0 -z-10 w-full h-full object-cover" id="heroBg" />
-      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-white via-white/40 to-transparent"></div>
+      <img src="https://images.unsplash.com/photo-1542396601-dca920ea2807?q=80&w=1920&auto=format&fit=crop" alt="Maternity and newborn photography" class="absolute inset-0 -z-10 w-full h-full object-cover" id="heroBg" />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/70 via-ink/50 to-ink/20"></div>
       <div class="mx-auto max-w-4xl px-6 text-center">
-        <h1 class="font-display text-4xl sm:text-6xl leading-tight text-ink/90">Luxury Photography <span class="gold-text">from Bump to Born</span></h1>
-        <p class="mt-4 text-ink/70 max-w-2xl mx-auto">Timeless maternity and newborn imagery with premium styling, soft palettes, and heartfelt storytelling.</p>
+        <h1 class="font-display text-4xl sm:text-6xl leading-tight text-white">Luxury Photography <span class="gold-text">from Bump to Born</span></h1>
+        <p class="mt-4 text-white/80 max-w-2xl mx-auto">Timeless maternity and newborn imagery with premium styling, soft palettes, and heartfelt storytelling.</p>
         <div class="mt-8 flex items-center justify-center gap-4">
           <a href="#contact" class="btn-ripple inline-flex items-center rounded-full bg-gold text-white px-6 py-3 text-sm font-medium shadow-soft hover:brightness-110">Book a Session</a>
-          <a href="#portfolio" class="inline-flex items-center rounded-full border border-ink/15 px-6 py-3 text-sm text-ink/80 hover:bg-ink/5">View Portfolio</a>
+          <a href="#portfolio" class="inline-flex items-center rounded-full border border-white/60 px-6 py-3 text-sm text-white/90 hover:bg-white/10">View Portfolio</a>
         </div>
       </div>
     </section>
@@ -95,20 +85,23 @@
       <div class="mx-auto max-w-7xl px-6">
         <h2 class="font-display text-3xl sm:text-4xl text-center">Our <span class="gold-text">Services</span></h2>
         <div class="mt-12 grid md:grid-cols-3 gap-6">
-          <article class="svc opacity-0 translate-y-6 rounded-2xl bg-white p-8 shadow-soft border border-ink/5">
-            <div class="text-4xl" aria-hidden="true">🤰</div>
+          <article class="svc rounded-2xl bg-white p-8 shadow-soft border border-ink/5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <img src="https://images.unsplash.com/photo-1531983412531-1f49a365ffed?q=80&w=1200&auto=format&fit=crop" alt="Elegant maternity portrait in studio" class="w-full h-40 object-cover rounded-xl" loading="lazy"/>
             <h3 class="mt-4 font-display text-2xl">Maternity</h3>
             <p class="mt-2 text-ink/70">Elegant sessions with premium gowns and soft, flattering light.</p>
+            <div class="mt-4"><a href="#contact" class="inline-flex items-center rounded-full border border-ink/15 px-4 py-2 text-sm text-ink/80 hover:bg-ink/5">Learn more</a></div>
           </article>
-          <article class="svc opacity-0 translate-y-6 rounded-2xl bg-white p-8 shadow-soft border border-ink/5">
-            <div class="text-4xl" aria-hidden="true">👶</div>
+          <article class="svc rounded-2xl bg-white p-8 shadow-soft border border-ink/5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Newborn wrapped in soft blanket" class="w-full h-40 object-cover rounded-xl" loading="lazy"/>
             <h3 class="mt-4 font-display text-2xl">Newborn</h3>
             <p class="mt-2 text-ink/70">Safety‑first posing, gentle styling, and cozy moments.</p>
+            <div class="mt-4"><a href="#contact" class="inline-flex items-center rounded-full border border-ink/15 px-4 py-2 text-sm text-ink/80 hover:bg-ink/5">Learn more</a></div>
           </article>
-          <article class="svc opacity-0 translate-y-6 rounded-2xl bg-white p-8 shadow-soft border border-ink/5">
-            <div class="text-4xl" aria-hidden="true">👨‍👩‍👧</div>
+          <article class="svc rounded-2xl bg-white p-8 shadow-soft border border-ink/5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop" alt="Family holding newborn together" class="w-full h-40 object-cover rounded-xl" loading="lazy"/>
             <h3 class="mt-4 font-display text-2xl">Family</h3>
             <p class="mt-2 text-ink/70">Heartfelt lifestyle portraits with relaxed direction.</p>
+            <div class="mt-4"><a href="#contact" class="inline-flex items-center rounded-full border border-ink/15 px-4 py-2 text-sm text-ink/80 hover:bg-ink/5">Learn more</a></div>
           </article>
         </div>
       </div>
@@ -160,65 +153,8 @@
     </div>
   </footer>
 
-  <!-- GSAP for subtle animations (optional offline-safe) -->
+  <!-- GSAP and app scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
-  <script>
-    // Helpers
-    const $= (s,c=document)=>c.querySelector(s); const $$=(s,c=document)=>Array.from(c.querySelectorAll(s));
-
-    // Hide loader on DOM ready
-    document.addEventListener('DOMContentLoaded',()=>{
-      const l=$('#loader'); if(l){ if(window.gsap){ gsap.to(l,{autoAlpha:0,duration:.4,onComplete:()=>l.remove()}); } else { l.remove(); } }
-      // Footer year
-      $('#year').textContent=new Date().getFullYear();
-      // Ripple
-      document.addEventListener('click',e=>{ const b=e.target.closest('.btn-ripple'); if(!b) return; const r=document.createElement('span'); const rc=b.getBoundingClientRect(); const size=Math.max(rc.width,rc.height); r.className='r'; r.style.width=r.style.height=size+'px'; r.style.left=(e.clientX-rc.left-size/2)+'px'; r.style.top=(e.clientY-rc.top-size/2)+'px'; b.appendChild(r); setTimeout(()=>r.remove(),600); });
-      // Smooth anchors
-      document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]'); if(!a) return; const id=a.getAttribute('href'); const t=document.querySelector(id); if(t){ e.preventDefault(); window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-64,behavior:'smooth'});} });
-    });
-
-    // Build thumbnails
-    const IMGS=[
-      'https://images.unsplash.com/photo-1547563856-1e7e2f5d7a37?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1542396601-dca920ea2807?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1511974035430-5de47d3b95da?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop'];
-
-    const thumbs=$('#thumbs'); const tpl=$('#thumbTpl');
-    IMGS.forEach((src,i)=>{ const n=tpl.content.firstElementChild.cloneNode(true); const img=n.querySelector('img'); img.src=src; img.alt='Portfolio image '+(i+1); img.loading='lazy'; n.addEventListener('click',()=>openLB(i)); n.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openLB(i);} }); thumbs.appendChild(n);});
-
-    // Lightbox
-    const lb=$('#lightbox'), lbImg=$('#lbImg'), lbCap=$('#lbCap'); let idx=0;
-    function show(){ lbImg.src=IMGS[idx]; lbCap.textContent=`Image ${idx+1} of ${IMGS.length}`; }
-    function openLB(i){ idx=i; show(); lb.classList.remove('hidden'); lb.classList.add('flex'); document.body.style.overflow='hidden'; }
-    function closeLB(){ lb.classList.add('hidden'); lb.classList.remove('flex'); document.body.style.overflow=''; }
-    function prev(){ idx=(idx-1+IMGS.length)%IMGS.length; show(); }
-    function next(){ idx=(idx+1)%IMGS.length; show(); }
-    $('#lbClose').addEventListener('click',closeLB); $('#lbPrev').addEventListener('click',prev); $('#lbNext').addEventListener('click',next);
-    lb.addEventListener('click',e=>{ if(e.target===lb) closeLB(); });
-    let sx=0; lbImg.addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX;},{passive:true}); lbImg.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-sx; if(dx>40) prev(); else if(dx<-40) next();},{passive:true});
-
-    // WhatsApp CTA (set your number here, intl format without plus)
-    const WHATSAPP='919999999999';
-    const wa=$('#waBtn');
-    if(wa){
-      const txt=encodeURIComponent('Hello! I would like to enquire about a session.');
-      wa.href=`https://wa.me/${WHATSAPP}?text=${txt}`;
-    }
-
-    // Subtle animations if GSAP present
-    if(window.gsap){
-      gsap.from('.svc',{opacity:0,y:16,stagger:0.12,duration:.7,ease:'power2.out',scrollTrigger:false});
-      gsap.to('#heroBg',{yPercent:12,ease:'none',scrollTrigger:{trigger:'#home',start:'top top',end:'bottom top',scrub:true}});
-    }
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
